@@ -18,7 +18,7 @@ class MainScreenElement {
         onView(
             allOf(
                 withId(R.id.text_home),
-                withText("This is home Fragment"),
-            ),
+                withText("This is home Fragment")
+            )
         )
 }
