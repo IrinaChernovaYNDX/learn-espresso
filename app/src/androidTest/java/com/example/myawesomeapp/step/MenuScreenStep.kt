@@ -6,10 +6,10 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import com.example.myawesomeapp.element.MenuScreenElement
 
 class MenuScreenStep {
-    private val menuBtn = MenuScreenElement()
+    private val slideshowBtn = MenuScreenElement()
 
-    fun clickOnMenuButton() {
-        menuBtn.menuButton()
+    fun clickOnSlideshowButton() {
+        slideshowBtn.slideshowButton()
             .check(matches(isDisplayed()))
             .perform(click())
     }
