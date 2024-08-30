@@ -18,7 +18,7 @@ class MenuScreenElement {
     fun userName(): ViewInteraction =
         onView(
             allOf(
-                withText("Android Studio"),
+                withText(R.string.nav_header_title),
                 isDescendantOfA(withId(R.id.nav_view))
             )
         )
