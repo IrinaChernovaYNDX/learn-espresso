@@ -22,6 +22,7 @@ class MainScreenElement {
                 isDescendantOfA(withId(R.id.toolbar))
             )
         )
+        
     fun menuOptions(): ViewInteraction =
         onView(
             withContentDescription("More options")
