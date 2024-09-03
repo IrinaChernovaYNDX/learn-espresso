@@ -25,10 +25,7 @@ class MenuScreenElement {
 
     fun userEmail(): ViewInteraction =
         onView(
-            allOf(
-                withText(R.string.nav_header_subtitle),
-                isDescendantOfA(withId(R.id.nav_view))
-            )
+            withId(R.id.textView)
         )
 
     fun homeButton(): ViewInteraction =

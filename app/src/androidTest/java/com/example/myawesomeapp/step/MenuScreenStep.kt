@@ -6,25 +6,30 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import com.example.myawesomeapp.element.MenuScreenElement
 
 class MenuScreenStep {
-    private val menuElement = MenuScreenElement()
+    private val userPicture = MenuScreenElement()
+    private val userName = MenuScreenElement()
+    private val userEmail = MenuScreenElement()
+    private val homeButton = MenuScreenElement()
+    private val galleryButton = MenuScreenElement()
+    private val slideshowBtn = MenuScreenElement()
 
     fun checkMenuElementsAreDisplayed() {
-        menuElement.userPicture().check(matches(isDisplayed()))
-        menuElement.userName().check(matches(isDisplayed()))
-        menuElement.userEmail().check(matches(isDisplayed()))
-        menuElement.homeButton().check(matches(isDisplayed()))
-        menuElement.galleryButton().check(matches(isDisplayed()))
-        menuElement.slideshowButton().check(matches(isDisplayed()))
+        userPicture.userPicture().check(matches(isDisplayed()))
+        userName.userName().check(matches(isDisplayed()))
+        userEmail.userEmail().check(matches(isDisplayed()))
+        homeButton.homeButton().check(matches(isDisplayed()))
+        galleryButton.galleryButton().check(matches(isDisplayed()))
+        slideshowBtn.slideshowButton().check(matches(isDisplayed()))
     }
 
     fun clickOnSlideshowButton() {
-        menuElement.slideshowButton()
+        slideshowBtn.slideshowButton()
             .check(matches(isDisplayed()))
             .perform(click())
     }
 
     fun clickOnHomeButton() {
-        menuElement.homeButton()
+        homeButton.homeButton()
             .check(matches(isDisplayed()))
             .perform(click())
     }
