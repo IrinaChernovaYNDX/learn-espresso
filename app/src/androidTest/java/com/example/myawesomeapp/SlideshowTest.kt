@@ -2,9 +2,9 @@ package com.example.myawesomeapp
 
 import androidx.test.core.app.ActivityScenario
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.myawesomeapp.step.MainScreenStep
 import com.example.myawesomeapp.step.MenuScreenStep
 import com.example.myawesomeapp.step.SlideshowScreenStep
+import com.example.myawesomeapp.step.ToolbarStep
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
@@ -14,9 +14,9 @@ import org.junit.runner.RunWith
 class SlideshowTest {
     private lateinit var scenario: ActivityScenario<MainActivity>
 
-    private val menu = MainScreenStep()
-    private val slideshowButton = MenuScreenStep()
-    private val slideshowScreenText = SlideshowScreenStep()
+    private val menu = MenuScreenStep()
+    private val slideshow = SlideshowScreenStep()
+    private val toolbar = ToolbarStep()
 
     @Before
     fun setup() {
@@ -26,11 +26,11 @@ class SlideshowTest {
     @Test
     fun checkSlideshowScreen() {
         // clicking on menu button
-        menu.clickOnMenuButton()
+        toolbar.clickOnMenuButton()
         // clicking on slideshow option
-        slideshowButton.clickOnSlideshowButton()
+        menu.clickOnSlideshowButton()
         // checking slideshow screen
-        slideshowScreenText.checkSlideshowScreenTextIsDisplayed()
+        slideshow.checkSlideshowScreenTextIsDisplayed()
     }
 
     @After
