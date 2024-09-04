@@ -10,24 +10,6 @@ import com.example.myawesomeapp.R
 import org.hamcrest.core.AllOf.allOf
 
 class MainScreenElement {
-    fun menuButton(): ViewInteraction =
-        onView(
-            withContentDescription("Open navigation drawer")
-        )
-
-    fun menuHeading(): ViewInteraction =
-        onView(
-            allOf(
-                withText(R.string.menu_home),
-                isDescendantOfA(withId(R.id.toolbar))
-            )
-        )
-        
-    fun menuOptions(): ViewInteraction =
-        onView(
-            withContentDescription("More options")
-        )
-
     fun mainScreenText(): ViewInteraction =
         onView(
             allOf(
