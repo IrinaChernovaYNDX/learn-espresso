@@ -12,8 +12,7 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class SecondTest {
-    private lateinit var scenario: ActivityScenario<MainActivity>
-    
+    private lateinit var scenario: ActivityScenario<MainActivity>    
 
     private val menu = MenuScreenStep()
     private val main = MainScreenStep()
